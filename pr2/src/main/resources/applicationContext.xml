@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+    <context:property-placeholder location="classpath:prop.properties"/>
+
+    <bean id="pencilBean"
+          class="ru.pr2.Pencil">
+        <property name="color" value="${pencil.value}" />
+    </bean>
+
+    <bean id="notebookBean"
+          class="ru.pr2.Notebook">
+        <property name="type" value="в клетку" />
+    </bean>
+
+    <bean id="textbookBean"
+          class="ru.pr2.Textbook">
+        <constructor-arg value="ОБЖ"/>
+    </bean>
+
+    <bean id="schoolBagBean"
+          class="ru.pr2.SchoolBag">
+        <constructor-arg ref="pencilBean"/>
+        <constructor-arg ref="notebookBean"/>
+        <constructor-arg ref="textbookBean"/>
+    </bean>
+</beans>

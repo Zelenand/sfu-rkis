@@ -1,0 +1,21 @@
+<html lang="en" xmlns:th="http://www.springframework.org/schema/mvc"
+      xmlns:security="http://www.springframework.org/security/tags" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Главная</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<div>
+    <h3>${pageContext.request.userPrincipal.name}</h3>
+    <security:authorize access="!isAuthenticated()">
+        <h4><a href="/login">Войти</a></h4>
+        <h4><a href="/registration">Зарегистрироваться</a></h4>
+    </security:authorize>
+    <security:authorize access="isAuthenticated()">
+        <h4><a href="/logout">Выйти</a></h4>
+    </security:authorize>
+    <h4><a href="/bags">Таблица сумок (пользователи, для админа открыты функции добавления, изменения, удаления)</a></h4>
+    <h4><a href="/add">Добавить сумку (только админ)</a></h4>
+</div>
+</body>
+</html>

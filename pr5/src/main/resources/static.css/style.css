@@ -1,0 +1,72 @@
+:root {
+    --color1: #246bff;
+    --color2: #a2d6f6;
+}
+
+header h1{
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+}
+
+header, footer, nav {
+    background: var(--color1);
+    background: -moz-linear-gradient(left, var(--color1) 0%, var(--color2) 100%);
+    background: -webkit-linear-gradient(left, var(--color1) 0%, var(--color2) 100%);
+    background: linear-gradient(to right, var(--color1) 0%, var(--color2) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=var(--color1), endColorstr=var(--color2),
+    GradientType=1);
+}
+
+nav li {
+    padding: 50px;
+}
+
+nav .navbar-nav li a {
+    color: white;
+}
+
+.container {
+    padding-top: 100px;
+}
+
+.container .row {
+    color: white;
+    margin-bottom: 10px;
+
+    background: var(--color1);
+    background: -moz-linear-gradient(left, var(--color1) 0%, var(--color2) 100%);
+    background: -webkit-linear-gradient(left, var(--color1) 0%, var(--color2) 100%);
+    background: linear-gradient(to right, var(--color1) 0%, var(--color2) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=var(--color1), endColorstr=var(--color2),
+    GradientType=1);
+
+    border: 1px solid var(--color2);
+    border-radius: 20px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: white;
+}
+
+p {
+    text-align: center;
+    padding-top: 20px;
+}
+
+/* Устанавливаем высоту контейнера по центру экрана и центрируем его содержимое */
+.center-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Устанавливаем ширину формы в 25% от размера экрана */
+.custom-form {
+    width: 25%;
+}
